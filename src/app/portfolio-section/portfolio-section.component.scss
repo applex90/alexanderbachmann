@@ -1,0 +1,51 @@
+#portfolio {
+    color: white;
+    padding-left: 72px;
+    padding-right: 72px;
+    padding-top: 72px;
+}
+
+.portfolio-main-topic {
+
+    h4 {
+        margin: 0;
+    }
+}
+
+.project-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
+    img {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .projects-description {
+        background-color: white;
+        padding: 16px;
+        color: var(--color-grey);
+
+        h3 {
+            margin: 0;
+        }
+    }
+}
+
+.project-collection {
+    column-count: 2;
+    column-gap: 16px;
+
+    .project-box {
+        width: 100%;
+        margin-top: 16px;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .project-topic-box {
+        width: 100%;
+    }
+}

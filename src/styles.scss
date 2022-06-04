@@ -3,12 +3,18 @@
     --color-primary: #5221E6;
     --color-hover: #1e0079;
     --color-link-inactive: #8491a0;
+    --color-grey: #424242;
 }
 
 * {
     font-family: 'Sen';
     font-style: normal;
     font-size: 16px;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -23,5 +29,15 @@ h1 {
 
 h2 {
     font-size: 55px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 18px;
     font-weight: bold;
 }

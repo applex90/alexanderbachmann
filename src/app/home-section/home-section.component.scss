@@ -1,4 +1,4 @@
-section {
+#home {
     display: flex;
     height: 100vh;
 }
@@ -15,6 +15,8 @@ section {
 
 .home-discription {
     z-index: 1;
+    display: flex;
+    align-items: center;
     width: 100%;
     height: auto;
     background-color: #181823;
