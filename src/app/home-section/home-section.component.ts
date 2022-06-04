@@ -19,6 +19,7 @@ export class HomeSectionComponent implements OnInit {
 
   typeWriting() {
     if (this.i < this.nameLetters.length) {
+      document.getElementById("name-placeholder").innerHTML += this.nameLetters[this.i];
       this.i++;
       setTimeout(this.typeWriting, this.typeSpeed);
     }
