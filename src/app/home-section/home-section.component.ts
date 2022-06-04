@@ -6,10 +6,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-section.component.scss']
 })
 export class HomeSectionComponent implements OnInit {
+  title = 'alexanderbachmann';
+  i = 0;
+  nameLetters = 'Alexander Bachmann';
+  typeSpeed = 60;
 
-  constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.typeWriting();
   }
 
+
+  typeWriting() {
+    if (this.i < this.nameLetters.length) {
+      this.i++;
+      setTimeout(this.typeWriting, this.typeSpeed);
+    }
+  }
 }
+
