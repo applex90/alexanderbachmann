@@ -1,5 +1,27 @@
-body {
-    margin: 0;
+:root {
+    --color-base: #000000;
+    --color-primary: #5221E6;
+    --color-hover: #1e0079;
+    --color-link-inactive: #8491a0;
+}
+
+* {
     font-family: 'Sen';
     font-style: normal;
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    background-color: black;
+}
+
+h1 {
+    font-size: 76px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 55px;
+    font-weight: bold;
 }

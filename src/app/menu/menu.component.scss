@@ -1,0 +1,50 @@
+header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-base);
+    padding-left: 72px;
+    padding-right: 72px;
+}
+
+.logo {
+    height: 70px;
+    cursor: pointer;
+}
+
+.nav-links {
+    z-index: 2;
+    height: 100%;
+
+    button {
+        height: stretch;
+        border: 0;
+        padding: 12px;
+        background-color: unset;
+        cursor: pointer;
+
+        a {
+            color: var(--color-link-inactive);
+            text-decoration: none;
+        }
+
+        &:hover {
+            background-color: var(--color-primary);
+            color: white;
+
+            a {
+                color: white;
+            }
+        }
+    }
+
+
+
+    
+}
+

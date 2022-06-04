@@ -1,0 +1,26 @@
+section {
+    display: flex;
+    height: 100vh;
+}
+
+.img-ab {
+    width: 450px;
+    height: auto;
+    object-fit: contain;
+    padding-top: 90px;
+    padding-bottom: 90px;
+    margin-right: -36px;
+    z-index: 2;
+}
+
+.home-discription {
+    z-index: 1;
+    width: 100%;
+    height: auto;
+    background-color: #181823;
+    color: white;
+    padding-left: 72px;
+    padding-right: 72px;
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
