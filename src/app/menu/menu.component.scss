@@ -20,6 +20,7 @@ header {
 .nav-links {
     z-index: 3;
     height: 100%;
+    user-select: none;
 
     button {
         height: stretch;
