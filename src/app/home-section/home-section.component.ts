@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import Typed from 'typed.js';
 
 @Component({
   selector: 'app-home-section',
@@ -7,22 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeSectionComponent implements OnInit {
   title = 'alexanderbachmann';
-  i = 0;
-  nameLetters = 'Alexander Bachmann';
-  typeSpeed = 60;
-
 
   ngOnInit() {
-    this.typeWriting();
-  }
-
-
-  typeWriting() {
-    if (this.i < this.nameLetters.length) {
-      document.getElementById("name-placeholder").innerHTML += this.nameLetters[this.i];
-      this.i++;
-      setTimeout(this.typeWriting, this.typeSpeed);
-    }
+    let typed = new Typed('#typed', {
+      strings: ['Alexander Bachmann.'],
+      typeSpeed: 80,
+      loop: false,
+      showCursor: true,
+      onComplete: () => {
+        let el = document.getElementsByClassName('typed-cursor');
+        el[0].remove();
+      },
+    });
   }
 }
-
