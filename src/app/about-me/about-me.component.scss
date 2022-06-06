@@ -1,0 +1,23 @@
+.about-me {
+    display: flex;
+    height: 600px;
+    color: var(--color-grey);
+    background-color: white;
+}
+
+.about-headline {
+    padding-left: 72px;
+    padding-right: 72px;
+    padding-top: 72px;
+    width: 50%;
+
+    h2 {
+        margin: 0;
+    }
+}
+
+.about-image {
+    width: 50%;
+    background-image: url("/assets/img/about_me.jpg");
+    background-position: top;
+}
