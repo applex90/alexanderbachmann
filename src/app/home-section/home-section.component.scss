@@ -4,11 +4,11 @@
 }
 
 .img-ab {
-    width: 450px;
+    width: auto;
     height: auto;
     object-fit: contain;
-    padding-top: 90px;
-    padding-bottom: 90px;
+    padding-top: 100px;
+    padding-bottom: 100px;
     margin-right: -36px;
     z-index: 2;
 }
@@ -23,8 +23,8 @@
     color: white;
     padding-left: 72px;
     padding-right: 72px;
-    padding-top: 90px;
-    padding-bottom: 90px;
+    padding-top: 100px;
+    padding-bottom: 100px;
 
     .typedanimation {
         color: var(--color-primary);
