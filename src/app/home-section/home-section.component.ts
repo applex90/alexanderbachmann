@@ -15,6 +15,7 @@ export class HomeSectionComponent implements OnInit {
       typeSpeed: 80,
       loop: false,
       showCursor: true,
+      startDelay: 1000,
       onComplete: () => {
         let el = document.getElementsByClassName('typed-cursor');
         el[0].remove();
