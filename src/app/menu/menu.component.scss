@@ -12,6 +12,10 @@ header {
     padding-right: 72px;
 }
 
+a {
+    z-index: 3;
+}
+
 .logo {
     height: 60px;
     cursor: pointer;
@@ -43,9 +47,5 @@ header {
             }
         }
     }
-
-
-
-    
 }
 

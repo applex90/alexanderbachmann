@@ -24,6 +24,16 @@ body {
     background-color: black;
 }
 
+a {
+    color: white;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+
+    &:hover{
+        color: var(--color-primary);
+    }
+}
+
 h1 {
     font-size: 76px;
     font-weight: bold;

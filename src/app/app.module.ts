@@ -9,6 +9,8 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeSectionComponent } from './home-section/home-section.component';
 import { PortfolioSectionComponent } from './portfolio-section/portfolio-section.component';
 import { AboutMeComponent } from './about-me/about-me.component';
+import { ImprintComponent } from './imprint/imprint.component';
+import { DataProtectionComponent } from './data-protection/data-protection.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { AboutMeComponent } from './about-me/about-me.component';
     FooterComponent,
     HomeSectionComponent,
     PortfolioSectionComponent,
-    AboutMeComponent
+    AboutMeComponent,
+    ImprintComponent,
+    DataProtectionComponent
   ],
   imports: [
     BrowserModule,
