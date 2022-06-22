@@ -1,0 +1,22 @@
+.skills {
+    color: white;
+    padding-left: 72px;
+    padding-right: 72px;
+    padding-top: 72px;
+    padding-bottom: 72px;
+    display: flex;
+    justify-content: space-between;
+
+    .skills-headline {
+        width: 24%;
+        margin-right: 72px;
+
+        h2 {
+            margin: 0;
+        }
+    }
+
+    .skill-collection{
+        width: calc(100% - 24%);
+    }
+}

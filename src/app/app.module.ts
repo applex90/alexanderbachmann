@@ -11,6 +11,7 @@ import { PortfolioSectionComponent } from './portfolio-section/portfolio-section
 import { AboutMeComponent } from './about-me/about-me.component';
 import { ImprintComponent } from './imprint/imprint.component';
 import { DataProtectionComponent } from './data-protection/data-protection.component';
+import { SkillsComponent } from './skills/skills.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { DataProtectionComponent } from './data-protection/data-protection.compo
     PortfolioSectionComponent,
     AboutMeComponent,
     ImprintComponent,
-    DataProtectionComponent
+    DataProtectionComponent,
+    SkillsComponent
   ],
   imports: [
     BrowserModule,
