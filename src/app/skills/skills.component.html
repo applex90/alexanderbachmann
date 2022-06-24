@@ -4,6 +4,9 @@
         <p>Here is a collection of my skills.</p>
     </div>
     <div class="skill-collection">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam, est? Architecto natus a cum ratione expedita nam. Unde, saepe ipsam?
+        <div *ngFor="let skill of skills" class="skill-item">
+            <img src="/assets/skill_icons/{{ skill.imgname }}.png">
+            <h4>{{ skill.title }}</h4>
+        </div>
     </div>
 </section>

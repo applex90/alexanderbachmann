@@ -20,7 +20,7 @@ footer {
             height: 60px;
         }
 
-        .xing-logo {
+        .xing-logo, .git-logo {
             height: 30px;
         }
     
@@ -47,6 +47,11 @@ footer {
             display: flex;
             flex-direction: column;
             gap: 56px;
+
+            .profiles {
+                display: flex;
+                gap: 14px;
+            }
         }
     }
 

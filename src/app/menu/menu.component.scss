@@ -35,7 +35,7 @@ a {
         a {
             color: var(--color-link-inactive);
             text-decoration: none;
-            transition: all 125ms ease-in-out;
+            transition: background-color 125ms ease-in-out;
         }
 
         &:hover {
