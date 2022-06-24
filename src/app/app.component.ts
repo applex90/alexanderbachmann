@@ -8,8 +8,10 @@ import AOS from 'aos';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  
+
   ngOnInit() {
-    AOS.init();
+    AOS.init({
+      once: true,
+    });
   }
 }

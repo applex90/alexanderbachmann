@@ -4,7 +4,7 @@
         <p>Here is a collection of my skills.</p>
     </div>
     <div class="skill-collection">
-        <div *ngFor="let skill of skills" class="skill-item">
+        <div *ngFor="let skill of skills" class="skill-item" data-aos="fade-left">
             <img src="/assets/skill_icons/{{ skill.imgname }}.png">
             <h4>{{ skill.title }}</h4>
         </div>
