@@ -6,4 +6,52 @@
     padding-bottom: 72px;
     display: flex;
     justify-content: space-around;
+    gap: 14px;
+
+    h2 {
+        margin: 0;
+    }
+
+    .contact-data {
+
+        h5 {
+            margin: 0;
+            margin-bottom: 4px;
+        }
+
+        input {
+            width: 100%;
+            margin-bottom: 28px;
+            background-color: #181823;
+            color: white;
+            border: none;
+        }
+
+        textarea {
+            width: 100%;
+            height: 120px;
+            resize: none;
+            margin-bottom: 28px;
+            background-color: #181823;
+            color: white;
+            border: none;
+        }
+
+        textarea:focus, input:focus{
+            outline: none;
+            border: 2px solid rgb(82, 33, 230);
+        }
+
+        button {
+            width: 100%;
+            height: 60px;
+            background-color: rgb(82, 33, 230);
+            color: white;
+            cursor: pointer;
+
+            &:hover {
+                filter: brightness(1.1);
+            }
+        }
+    }
 }

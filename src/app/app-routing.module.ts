@@ -7,7 +7,8 @@ import { MainComponent } from './main/main.component';
 const routes: Routes = [
   { path: '', component: MainComponent },
   { path: 'imprint', component: ImprintComponent },
-  { path: 'data-protection', component: DataProtectionComponent }
+  { path: 'data-protection', component: DataProtectionComponent },
+  { path: 'success/:state', component: MainComponent}
 ];
 
 @NgModule({
