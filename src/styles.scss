@@ -127,5 +127,14 @@ h5 {
         font-size: 18px;
     }
 }
+
+mat-icon {
+    font-size: 50px !important;
+    height: 50px !important;
+    width: 50px !important;
+    color: white;
+    cursor: pointer;
+}
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

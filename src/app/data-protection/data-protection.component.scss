@@ -8,4 +8,14 @@
     p {
         word-wrap: break-word;
     }
+
+    a {
+        color: white;
+        text-decoration: underline;
+        text-underline-offset: 4px;
+
+        &:hover {
+            text-decoration-color: var(--color-primary);
+        }
+    }
 }

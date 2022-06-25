@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatSidenav } from '@angular/material/sidenav';
 import { Router } from '@angular/router';
 import AOS from 'aos';
+import { SidenavService } from './side-nav-service';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +10,24 @@ import AOS from 'aos';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-
+  @ViewChild('sidenav') public sidenav: MatSidenav;
+  
+  constructor(private sidenavService: SidenavService) {
+  }
+  
   ngOnInit() {
     AOS.init({
       once: true,
     });
   }
+
+  ngAfterViewInit(): void {
+    this.sidenavService.setSidenav(this.sidenav);
+  }
+  
 }
+
+
+
+
+

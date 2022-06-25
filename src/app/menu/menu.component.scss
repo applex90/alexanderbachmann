@@ -29,10 +29,23 @@ a {
     }
 }
 
+.mobile-nav-btn {
+    display: none;
+    cursor: pointer;
+
+    @media (max-width: 768px) {
+        display: inline;
+    }
+}
+
 .nav-links {
     z-index: 3;
     height: 100%;
     user-select: none;
+
+    @media (max-width: 768px) {
+        display: none;
+    }
 
     button {
         height: stretch;

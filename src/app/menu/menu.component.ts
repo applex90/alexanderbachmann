@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SidenavService } from '../side-nav-service';
 
 @Component({
   selector: 'app-menu',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(private sidenav: SidenavService) { }
 
   ngOnInit(): void {
   }
 
+  toggleRightSidenav() {
+    this.sidenav.toggle();
+ }
 }
