@@ -4,6 +4,13 @@
     padding-right: 72px;
     padding-top: 72px;
     padding-bottom: 72px;
+
+     @media (max-width: 768px) {
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
 }
 
 .portfolio-main-topic {
@@ -38,6 +45,11 @@
 .project-collection {
     column-count: 2;
     column-gap: 16px;
+
+    @media (max-width: 768px) {
+        column-count: 1;
+        column-gap: 0;
+    }
 
     .project-box {
         width: 100%;
