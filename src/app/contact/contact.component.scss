@@ -8,6 +8,10 @@
     justify-content: space-around;
     gap: 14px;
 
+    @media (max-width: 992px) {
+        flex-direction: column;
+    }
+
     h2 {
         margin: 0;
     }

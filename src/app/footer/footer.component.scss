@@ -1,14 +1,21 @@
 footer {
-    height: 422px;
+    min-height: 422px;
     background-color: #181823;
     color: white;
     padding-left: 72px;
     padding-right: 72px;
     padding-top: 72px;
     padding-bottom: 72px;
+}
+
+.footer-container {
     display: flex;
     align-items: stretch;
     justify-content: space-between;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
 
     .left-content {
         display: flex;
@@ -20,59 +27,61 @@ footer {
             height: 60px;
         }
 
-        .xing-logo, .git-logo {
+        .xing-logo,
+        .git-logo {
             height: 30px;
         }
-    
-        .law-content {
-            display: flex;
-            justify-content: flex-start;
-            gap: 14px;
-            
-            a {
-                color: var(--color-link-inactive);
-                text-decoration: none;
 
-                &:hover {
-                    color: var(--color-primary);
-                }
-            }
-
-            span {
-                color: var(--color-link-inactive);
-            }
-        }
-
-        .img-container {
-            display: flex;
-            flex-direction: column;
-            gap: 56px;
-
-            .profiles {
-                display: flex;
-                gap: 14px;
-            }
-        }
     }
 
-    .right-content {
+    .img-container {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        gap: 28px;
+        gap: 56px;
 
-        a {
-            text-decoration: none;
-
-            &:hover {
-                color: var(--color-primary);
-            }
+        .profiles {
+            display: flex;
+            gap: 14px;
         }
     }
-        
 }
 
+.right-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 28px;
 
+    @media (max-width: 768px) {
+        margin-top: 56px;
+        margin-bottom: 56px;
+    }
 
+    a {
+        text-decoration: none;
 
+        &:hover {
+            color: var(--color-primary);
+        }
+    }
+}
 
+.law-content {
+    display: flex;
+    justify-content: flex-start;
+    align-self: flex-end;
+    gap: 14px;
+    
+    a {
+        color: var(--color-link-inactive);
+        text-decoration: none;
+
+        &:hover {
+            color: var(--color-primary);
+        }
+    }
+
+    span {
+        color: var(--color-link-inactive);
+    }
+}

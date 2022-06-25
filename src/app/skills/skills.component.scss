@@ -7,13 +7,22 @@
     display: flex;
     justify-content: space-between;
 
+    @media (max-width: 576px) {
+        flex-direction: column;
+    }
+
     .skills-headline {
         width: 24%;
         margin-right: 72px;
 
+        @media (max-width: 576px) {
+            width: 100%;
+            flex-direction: column;
+        }
+
         h2 {
             margin: 0;
-        }
+        }    
     }
 
     .skill-collection{
@@ -21,10 +30,14 @@
         display: flex;
         flex-wrap: wrap;
 
+        @media (max-width: 576px) {
+            width: 100%;
+            flex-direction: column;
+        }
+
         .skill-item {
             flex: calc(33% - 14px);
             display: flex;
-            align-items: center;
             gap: 14px;
             padding: 8px;
 
@@ -34,8 +47,7 @@
 
             @media (max-width: 768px) {
                 flex: calc(100% - 14px);
-            }
-                
+            }                
 
             img {
                 width: 48px;
