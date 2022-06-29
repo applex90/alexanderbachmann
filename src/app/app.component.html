@@ -1,19 +1,19 @@
-<!-- <mat-sidenav-container>
-    <mat-sidenav mode="over" position="end" role="navigation" #sidenav>
+<mat-sidenav-container>
+    <mat-sidenav mode="over" position="end" role="navigation" #sidenav closed>
         <div class="close-btn">
             <mat-icon class="close-sidebar" (click)="sidenav.toggle()">close</mat-icon>
         </div>
         <div class="nav-links">
             <button><a href="#home">Home</a></button>
-            <button><a href="#about-me">About me</a></button>
-            <button><a href="#skills">Skills</a></button>
+            <button><a href="#about-me" >About me</a></button>
+            <button><a href="#skills" data-aos-anchor="#skills">Skills</a></button>
             <button><a href="#portfolio">Portfolio</a></button>
             <button><a href="#contact">Contact</a></button>
         </div>
     </mat-sidenav>
-    <mat-sidenav-content> -->
+    <mat-sidenav-content role="main">
         <app-menu></app-menu>
         <router-outlet></router-outlet>
         <app-footer></app-footer>
-    <!-- </mat-sidenav-content>
-</mat-sidenav-container> -->
+    </mat-sidenav-content>
+</mat-sidenav-container>

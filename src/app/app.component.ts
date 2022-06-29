@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatSidenav } from '@angular/material/sidenav';
+import { MatSidenav, MatSidenavContainer } from '@angular/material/sidenav';
 import { Router } from '@angular/router';
 import AOS from 'aos';
 import { SidenavService } from './side-nav-service';
@@ -11,10 +11,11 @@ import { SidenavService } from './side-nav-service';
 })
 export class AppComponent implements OnInit {
   @ViewChild('sidenav') public sidenav: MatSidenav;
-  
+  @ViewChild(MatSidenavContainer) sidenavContainer: MatSidenavContainer;
+
   constructor(private sidenavService: SidenavService) {
   }
-  
+
   ngOnInit() {
     AOS.init({
       once: true,
@@ -23,8 +24,11 @@ export class AppComponent implements OnInit {
 
   ngAfterViewInit(): void {
     this.sidenavService.setSidenav(this.sidenav);
+    this.sidenavContainer.scrollable.elementScrolled().subscribe(() => {
+      AOS.refresh();
+    });
   }
-  
+
 }
 
 

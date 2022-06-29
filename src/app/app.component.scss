@@ -1,4 +1,14 @@
+* {
+    scroll-behavior: smooth;
+}
+
 mat-sidenav-container {
+    height: 100vh;
+    overflow-y: auto;
+    background: unset;
+}
+
+mat-sidenav-content {
     height: 100%;
 }
 
@@ -6,6 +16,7 @@ mat-sidenav {
     background-color: #181823;
     width: 200px;
     padding: 8px;
+    position: fixed;
 
     .close-btn {
         display: flex;
@@ -35,13 +46,11 @@ mat-sidenav {
                 color: white;
                 text-decoration: underline;
                 text-underline-offset: 4px;
-        
+
                 &:hover {
                     text-decoration-color: var(--color-primary);
                 }
             }
         }
     }
-
-
 }
