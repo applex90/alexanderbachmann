@@ -15,22 +15,8 @@ export class MainComponent implements OnInit {
   constructor(private route: ActivatedRoute, private router: Router, private snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
-    
-    this.route.params.subscribe((params) => {
-      this.redirectState = params['state'];
-      if (this.redirectState == 'ok') {
-        // this.router.navigateByUrl('#contact');
-        this.openSnackBar('Thanks, your email was sent successfully.');
-      }
-    }
-    )
+  
   }
 
-  openSnackBar(message) {
-    this.snackBar.open(message, '', {
-      duration: 5000,
-      verticalPosition: 'top'
-    })
-  }
 
 }
