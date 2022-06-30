@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationService } from '../navigation.service';
 import { SidenavService } from '../side-nav-service';
 
 @Component({
@@ -8,7 +9,7 @@ import { SidenavService } from '../side-nav-service';
 })
 export class MenuComponent implements OnInit {
 
-  constructor(private sidenav: SidenavService) { }
+  constructor(private sidenav: SidenavService,  public navigation: NavigationService) { }
 
   ngOnInit(): void {
   }

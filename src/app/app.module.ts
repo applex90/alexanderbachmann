@@ -19,6 +19,10 @@ import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { SidenavService } from './side-nav-service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ViewportScroller } from '@angular/common';
+import { Router, Scroll } from '@angular/router';
+import { filter } from 'rxjs';
+import { NavigationService } from './navigation.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +36,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     ImprintComponent,
     DataProtectionComponent,
     SkillsComponent,
-    ContactComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -42,9 +46,32 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     MatSidenavModule,
     FormsModule,
     MatIconModule,
-    HttpClientModule,
+    HttpClientModule
   ],
-  providers: [SidenavService],
+  providers: [SidenavService, NavigationService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(router: Router, viewportScroller: ViewportScroller) {
+    viewportScroller.setOffset([0, 0]);
+    router.events
+      .pipe(filter((e) => e instanceof Scroll))
+      .subscribe((e: Scroll) => {
+        //a good solve but it still does not scroll to anchor element after second click on the same anchor
+        //one fix should be to set routing config option onSameUrlNavigation: 'reload',
+        if (e.anchor) {
+          // anchor navigation
+          /* setTimeout is the core line to solve the solution */
+          setTimeout(() => {
+            viewportScroller.scrollToAnchor(e.anchor);
+          });
+        } else if (e.position) {
+          // backward navigation
+          viewportScroller.scrollToPosition(e.position);
+        } else {
+          // forward navigation
+          viewportScroller.scrollToPosition([0, 0]);
+        }
+      });
+  }
+}

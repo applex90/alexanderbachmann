@@ -4,11 +4,11 @@
             <mat-icon class="close-sidebar" (click)="sidenav.toggle()">close</mat-icon>
         </div>
         <div class="nav-links">
-            <button><a href="#home">Home</a></button>
-            <button><a href="#about-me" >About me</a></button>
-            <button><a href="#skills" data-aos-anchor="#skills">Skills</a></button>
-            <button><a href="#portfolio">Portfolio</a></button>
-            <button><a href="#contact">Contact</a></button>
+            <button routerLink="#home" (click)="navigation.forceNavigate('home')"><a>Home</a></button>
+            <button routerLink="#about-me" (click)="navigation.forceNavigate('about')"><a>About me</a></button>
+            <button routerLink="#skills" (click)="navigation.forceNavigate('skills')"><a>Skills</a></button>
+            <button routerLink="#portfolio" (click)="navigation.forceNavigate('portfolio')"><a>Portfolio</a></button>
+            <button routerLink="#contact" (click)="navigation.forceNavigate('contact')"><a>Contact</a></button>
         </div>
     </mat-sidenav>
     <mat-sidenav-content role="main">

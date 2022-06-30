@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatSidenav, MatSidenavContainer } from '@angular/material/sidenav';
 import { Router } from '@angular/router';
 import AOS from 'aos';
+import { NavigationService } from './navigation.service';
 import { SidenavService } from './side-nav-service';
 
 @Component({
@@ -13,7 +14,7 @@ export class AppComponent implements OnInit {
   @ViewChild('sidenav') public sidenav: MatSidenav;
   @ViewChild(MatSidenavContainer) sidenavContainer: MatSidenavContainer;
 
-  constructor(private sidenavService: SidenavService) {
+  constructor(private sidenavService: SidenavService, public navigation: NavigationService) {
   }
 
   ngOnInit() {
