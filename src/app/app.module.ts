@@ -18,6 +18,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { SidenavService } from './side-nav-service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { SidenavService } from './side-nav-service';
     MatSnackBarModule,
     MatSidenavModule,
     FormsModule,
-    MatIconModule 
+    MatIconModule,
+    HttpClientModule,
   ],
   providers: [SidenavService],
   bootstrap: [AppComponent]
