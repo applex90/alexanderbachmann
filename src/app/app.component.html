@@ -1,5 +1,5 @@
 <mat-sidenav-container>
-    <mat-sidenav mode="over" position="end" role="navigation" #sidenav closed>
+    <mat-sidenav mode="over" position="end" role="navigation" #sidenav closed [autoFocus]="false">
         <div class="close-btn">
             <mat-icon class="close-sidebar" (click)="sidenav.toggle()">close</mat-icon>
         </div>
