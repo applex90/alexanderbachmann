@@ -6,15 +6,48 @@
     <div class="contact-form">
         <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
             <div class="contact-data">
-                <label for="fname"><h5>Name</h5></label>
-                <input id="fname" name="name"  #name="ngModel" [(ngModel)]="contact.name" required>
+                <label for="fname">
+                    <h5>Name</h5>
+                </label>
+                <input
+                id="fname"
+                name="name"
+                #name="ngModel"
+                [(ngModel)]="contact.name"
+                minlength="4"
+                required>
+            
+                <label for="email">
+                    <h5>Email</h5>
+                </label>
+                <input
+                type="email"
+                id="email"
+                name="email"
+                #email="ngModel"
+                [(ngModel)]="contact.email"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                required>
 
-                <label for="email"><h5>Email</h5></label>
-                <input type="email" id="email" name="email" #email="ngModel" [(ngModel)]="contact.email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
-                <label for="message"><h5>Message</h5></label>
-                <textarea id="message" name="message" #message="ngModel" [(ngModel)]="contact.message" rows="10" placeholder="What would you like to tell me?" required></textarea>
+                <label for="message">
+                    <h5>Message</h5>
+                </label>
+                <textarea
+                id="message"
+                name="message"
+                #message="ngModel"
+                [(ngModel)]="contact.message"
+                rows="10"
+                placeholder="What would you like to tell me?"
+                required></textarea>
 
-                <button type="submit" class="button-contact" [disabled]="!contactForm.form.valid"><b>LET'S GET STARTED</b></button>
+                <button
+                type="submit"
+                class="button-contact"
+                [disabled]="!contactForm.form.valid"
+                ><b>LET'S GETSTARTED</b></button>
+
+                <div *ngIf="mailSent" class="mail-sent">Thanks, your email was sent successfully.</div>
             </div>
 
         </form>

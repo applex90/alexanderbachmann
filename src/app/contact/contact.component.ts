@@ -8,10 +8,12 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 
 export class ContactComponent implements OnInit {
+
+  mailSent: boolean = false;
   /**
    * This is bind to ngForm's InputFields in Template File
    */
-   contact = {
+  contact = {
     name: '', //Bind  to InputField name="name"
     email: '', //Bind to InputField name="email"
     message: '', //Bind to InputField name="message"
@@ -20,7 +22,7 @@ export class ContactComponent implements OnInit {
   /**
    * A post request construct configuration
    */
-   post = {
+  post = {
     endPoint: 'https://www.alexander-bachmann-portfolio.de/send_mail.php',
     // What to send, notice JSON.stringify
     body: (payload: any) => JSON.stringify(payload),
@@ -35,7 +37,7 @@ export class ContactComponent implements OnInit {
 
   constructor(private http: HttpClient) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   /**
    * Do not forget to import FormsModule in app.module.ts
@@ -46,14 +48,21 @@ export class ContactComponent implements OnInit {
         .post(this.post.endPoint, this.post.body(this.contact))
         .subscribe({
           next: (response) => {
-            console.log(response);
+            console.log('response');
             // Here Message was send
           },
           error: (error) => {
             console.error(error);
             // Here Message was not send!!!!!
           },
-          complete: () => console.info('send post complete'),
+          complete: () => {
+            console.info('send post complete'),
+            this.mailSent = true;
+            setTimeout(() => {
+              this.mailSent = false;
+            }, 10000);
+          }
+          
         });
     }
   }
