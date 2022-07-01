@@ -5,7 +5,7 @@
         <p>Use the following form or get in touch by emailing <a href="mailto:alex20bachmann@gmx.de">alex20bachmann@gmx.de</a></p>
     </div>
     <div class="contact-form">
-        <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+        <form ngNativeValidate (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
             <div class="contact-data">
                 <label for="fname">
                     <h5>Name</h5>
@@ -45,7 +45,6 @@
                 <button
                 type="submit"
                 class="button-contact"
-                [disabled]="!contactForm.form.valid"
                 ><b>LET'S GETSTARTED</b></button>
 
                 <div *ngIf="mailSent" class="mail-sent">Thanks, your email was sent successfully.</div>
