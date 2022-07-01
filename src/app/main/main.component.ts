@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { NavigationService } from '../navigation.service';
 
 @Component({
   selector: 'app-main',
@@ -13,7 +12,7 @@ import { NavigationService } from '../navigation.service';
 export class MainComponent implements OnInit {
   redirectState: string;
 
-  constructor(private route: ActivatedRoute, private router: Router, private snackBar: MatSnackBar, public navigation: NavigationService) { }
+  constructor(private route: ActivatedRoute, private router: Router, private snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
   
