@@ -9,10 +9,10 @@ export class NavigationService {
     this.router
       .navigate(['/'], { fragment: name })
       .then((result) => {
-        console.log(result);
+        //console.log(result);
       })
       .catch((error) => {
-        console.error(error);
+        //console.error(error);
       });
   }
 
