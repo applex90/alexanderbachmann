@@ -12,7 +12,7 @@ export class SkillsComponent implements OnInit {
     {title: 'JavaScript', imgname: 'js'},
     {title: 'PHP', imgname: 'php'},
     {title: 'Angular', imgname: 'angular'},
-    {title: 'Application Programming Interface', imgname: 'api'},
+    {title: 'REST - Application Programming Interface', imgname: 'api'},
     {title: 'Bootstrap', imgname: 'bootstrap'},
     {title: 'Scrum', imgname: 'scrum'},
     {title: 'Design Thinking', imgname: 'design'},
