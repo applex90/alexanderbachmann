@@ -11,7 +11,9 @@
         <div *ngFor="let project of projects" class="project-box" data-aos="fade-up">
             <a href="{{ project.url }}" target="_blank">
                 <div class="project-details">
-                    <img src="{{ project.imgsrc }}" alt="{{ project.alt }}">
+                    <div class="img-container">
+                        <img src="{{ project.imgsrc }}" alt="{{ project.alt }}">
+                    </div>
                     <div class="projects-description">
                         <h3>{{ project.title }}</h3>
                         <p>{{ project.description }}</p>

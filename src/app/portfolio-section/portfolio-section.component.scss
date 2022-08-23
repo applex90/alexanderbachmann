@@ -5,7 +5,7 @@
     padding-top: 72px;
     padding-bottom: 72px;
 
-     @media (max-width: 768px) {
+    @media (max-width: 768px) {
         padding-left: 40px;
         padding-right: 40px;
         padding-top: 40px;
@@ -23,18 +23,25 @@
 .project-details {
     display: flex;
     flex-direction: column;
-    gap: 0;
-    transition: all 125ms ease-in-out;
+    gap: 0;   
 
-    &:hover {
-        transform: scale(1.03);
-    }
+    .img-container {
+        overflow: hidden;
 
-    img {
-        max-width: 100%;
-        height: auto;
-        object-fit: cover;
-    }
+        &:hover {
+
+            img {
+                transform: scale(1.2);
+            }
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+            transition: transform 150ms ease;
+        }
+    }   
 
     .projects-description {
         background-color: white;
@@ -43,7 +50,7 @@
 
         h3 {
             margin: 0;
-        }    
+        }
     }
 }
 
