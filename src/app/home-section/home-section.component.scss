@@ -20,6 +20,7 @@
     @media (max-width: 768px) {
         height: 530px;
         object-fit: cover;
+        padding-top: 0;
         margin-right: 0;
         padding-bottom: 0;
         z-index: -1;
@@ -63,5 +64,4 @@
             font-size: 18px;
         }
     }
-
 }
